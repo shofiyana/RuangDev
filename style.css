@@ -1,0 +1,82 @@
+:root {
+    --pink: #f14e95;
+    --bg: #0a0a0a;
+    --shadow:rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;;
+}
+
+body {
+    font-size: 1,5rem;
+    font-family: 'Open Sans', sans-serif;
+    min-height: 2000px;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(asset/gambar.webp);
+    /* supaya di secrol tidak ikut */
+    background-attachment: fixed;
+    background-position: center;
+    /* ukuran di sesuwaikan layar */
+    background-size: cover;
+    z-index: -1;
+    filter: sepia();
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background-color: var();
+}
+
+.hero h1, .hero h4, .hero p {
+    text-shadow: var(--shadow);
+}
+.hero h1 {
+    font-family: 'Tangerine', cursive;
+    font-size: 12rem;
+}
+
+.hero h4 {
+    font-size: 1,6rem;
+}
+
+.hero p {
+    font-size: 1,4rem;
+}
+
+.hero a {
+    color: var(--pink);
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;;
+}
+
+.hero a:hover {
+    background-color: var(--pink);
+    color: white;
+}
+
+/* Media Query */
+ /* Laptop */
+@media (max-width: 992px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* tablet */
+@media (max-width: 768px){
+    html {
+        font-size: 65%;
+    }
+}
+
+/* mobile phone */
+@media (max-width: 576px){
+    html {
+        font-size: 60%;
+    }
+}
